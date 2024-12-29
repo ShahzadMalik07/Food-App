@@ -39,10 +39,10 @@ const Body = () => {
     return data.length == 0 ? <Shimmer /> : (
         <div className="body">
             <div className="filter-data">
-                <div className="search">
-                    <input className="search-box" type="text" value={text} onChange={(e) => { setText(e.target.value) }} />
+                <div className="search ">
+                    <input className="search-box px-2 py-1 p-1 border" type="text"  onChange={(e) => { setText(e.target.value) }} />
 
-                    <button onClick={() => {
+                    <button className="px-3 py-1 bg-green-300 rounded-md" onClick={() => {
                         const filteredData = data.filter((res) => res.info.name.toLowerCase().includes(text.toLowerCase()))
 
                         setfilteredData(filteredData)
@@ -50,12 +50,13 @@ const Body = () => {
                     }} >Search</button>
                 </div>
                 <button className="filter-btn" onClick={() => {
-                    let newData = data.filter((res) => (res.info.avgRating >= 4.2))
+                    let newData = data.filter((res) => (res.info.avgRating >= 4.1))
                     setData(newData)
+                    
                     
                 }}>Filter it</button>
 
-                <input className="p-1 border " type="text" value={logged} onChange={(e)=>setusername(e.target.value)}/>
+            
             </div>
             <div className="card-container">
                 {filteredData.map((items) => (

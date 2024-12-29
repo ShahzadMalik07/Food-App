@@ -32,9 +32,7 @@ const Header = ()=>{
                     <li>onlineStatus:{onlineStatus?"✅":"❌"}</li>
                     <Link to="/" >Home</Link>
                     <Link to="/grocery" >Grocery</Link>
-                    <Link to="/about" >About</Link>
-                    <Link to="/contact" >Contact</Link>
-                    <Link to="/service" >Service</Link>
+                   
                     <li>Cart - {cartItems.length}</li>
                     <button className="btn-log" onClick={()=>{name=="Login"?setName("Logout"):setName("Login")}}>{name}</button>
                     <h6>{contextdata.logged}</h6>

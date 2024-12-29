@@ -29,7 +29,7 @@ const MainApp = () => {
 
   useEffect(() => {
     const data = {
-      name: "User"
+      name: "Anonymous"
     }
     setusername(data.name)
 

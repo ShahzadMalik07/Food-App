@@ -60,6 +60,8 @@
     padding: 10px;
     display: flex;
     gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .all-text > h4{
@@ -120,7 +122,8 @@
 }
 .search{
     display: flex;
-    gap: 3px;
+    gap: 5px;
+    padding-left: 40px;
 }
 .open{
     font-size: 10px;
