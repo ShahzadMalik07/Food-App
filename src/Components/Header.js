@@ -18,7 +18,7 @@ const Header = ()=>{
 
     
     const cartItems = useSelector((store)=>store.cart.Item)
-    console.log(cartItems)
+    // console.log(cartItems)
     
  
 
@@ -30,12 +30,12 @@ const Header = ()=>{
             <div className="nav-items">
                 <ul>
                     <li>onlineStatus:{onlineStatus?"✅":"❌"}</li>
-                    <Link to="/" >Home</Link>
-                    <Link to="/grocery" >Grocery</Link>
+                    <Link className="px-3 py-1 bg-orange-500 rounded-md text-white" to="/" >Home</Link>
+                    <Link className="px-3 py-1 bg-orange-500 rounded-md text-white" to="/grocery" >Grocery</Link>
                    
-                    <li>Cart - {cartItems.length}</li>
-                    <button className="btn-log" onClick={()=>{name=="Login"?setName("Logout"):setName("Login")}}>{name}</button>
-                    <h6>{contextdata.logged}</h6>
+                    <li className="bg-orange-500 rounded-md text-white">Cart - {cartItems.length}</li>
+                    <button className="px-3 py-1 bg-orange-500 rounded-md text-white" onClick={()=>{name=="Login"?setName("Logout"):setName("Login")}}>{name}</button>
+                    <h6 className="px-3 py-1 bg-green-400 rounded-md text-white">{contextdata.logged}</h6>
                  
                 </ul>
             </div>
